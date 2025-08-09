@@ -1,0 +1,31 @@
+package labprg;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class prg5 {
+    public static void main(String[] args) throws InterruptedException {
+        // Set ChromeDriver path
+        System.setProperty("webdriver.chrome.driver", "/home/skasc/Downloads/chromedriver");
+
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://portal2.passportindia.gov.in/");
+        driver.manage().window().maximize();
+
+        // Example: Selecting from dropdown
+        Select passportoffice = new Select(driver.findElement(By.name("dcdrLocation")));
+
+        passportoffice.selectByIndex(1); // Select 2nd option
+        Thread.sleep(2000);
+
+        passportoffice.selectByValue("CHENNAI"); // Select by value attribute
+        Thread.sleep(2000);
+
+        passportoffice.selectByVisibleText("Chennai"); // Select by visible text
+        Thread.sleep(2000);
+
+        driver.quit();
+    }
+}

@@ -1,0 +1,33 @@
+package mynewproj;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Class6 {
+    public static void main(String[] args) {
+        // Set the path to your ChromeDriver
+        System.setProperty("webdriver.chrome.driver", "/home/skasc/Downloads/chromedriver");
+
+        // Create ChromeDriver instance
+        WebDriver driver = new ChromeDriver();
+
+        // Open the W3Schools TryIt page
+        driver.get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_button_test");
+
+        // Maximize the browser window
+        driver.manage().window().maximize();
+
+        // Switch to the iframe
+        driver.switchTo().frame("iframeResult");
+
+        // Click the button inside the iframe
+        driver.findElement(By.xpath("/html/body/button")).click();
+
+        // Switch back to the main page content
+        driver.switchTo().defaultContent();
+
+        // Close the browser (optional)
+        driver.quit();
+    }
+}

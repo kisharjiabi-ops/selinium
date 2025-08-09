@@ -1,0 +1,35 @@
+package mynewproj;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Class3 {
+    public static void main(String[] args) {
+        // Set the path to ChromeDriver
+        System.setProperty("webdriver.chrome.driver", "/home/skasc/Downloads/chromedriver");
+
+        // Create a new instance of ChromeDriver
+        WebDriver driver = new ChromeDriver();
+
+        // Navigate to the file upload page
+        driver.get("https://demo.guru99.com/test/upload/");
+
+        // Locate the file input element and upload file
+        WebElement uploadElement = driver.findElement(By.id("uploadfile_0"));
+        uploadElement.sendKeys("/home/skasc/Downloads/javanotes5.pdf");
+
+        // Agree to the terms checkbox
+        driver.findElement(By.id("terms")).click();
+
+        // Click the 'Send' button
+        driver.findElement(By.name("send")).click();
+
+        // Optional: Print confirmation
+        System.out.println("File uploaded successfully!");
+
+        // Close the browser
+        driver.quit();
+    }
+}

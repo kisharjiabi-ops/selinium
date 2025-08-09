@@ -1,0 +1,25 @@
+package mynewproj;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class MyNewClass {
+    public static void main(String[] args) {
+        // Set path to ChromeDriver executable
+        System.setProperty("webdriver.chrome.driver", "/home/skasc/Downloads/chromedriver");
+
+        // Create WebDriver instance
+        WebDriver driver = new ChromeDriver();
+
+        // Navigate to Google
+        driver.navigate().to("https://www.google.com/");
+
+        // Optional: close browser after a few seconds
+        try {
+            Thread.sleep(3000); // wait 3 seconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.quit();
+    }
+}

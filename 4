@@ -1,0 +1,24 @@
+package mynewproj;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Class4 {
+    public static void main(String[] args) {
+        // Set the path for ChromeDriver
+        System.setProperty("webdriver.chrome.driver", "/home/skasc/Downloads/chromedriver");
+
+        // Launch Chrome
+        WebDriver driver = new ChromeDriver();
+
+        // Open Gmail
+        driver.get("https://accounts.google.com/");
+
+        // Click on "Sign in" (if it exists — Gmail opens directly to sign in page)
+        // driver.findElement(By.linkText("Sign in")).click(); // Optional
+
+        // Enter the email ID
+        driver.findElement(By.id("identifierId")).sendKeys("abc123@gmail.com");
+    }
+}

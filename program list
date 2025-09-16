@@ -1,0 +1,22 @@
+1. Open Firefox browser using Selenium WebDriver.
+
+2. Print a success message, that the website is open and close after 5 sec
+
+3. Upload a file using sendKeys() method.
+
+4. Access a link using linkText() and partialLinkText().
+
+5. Select multiple items in a dropdown menu.
+
+6. Locate a frame using tagName()
+7. Submit a login form using WebDriver.
+
+8. Use implicit wait for synchronization.
+
+9. Use explicit wait for synchronization.
+
+10. Handle a popup window by its name.
+
+11. Use locators with parameters to search for a keyword.
+
+12. Automate using dynamic XPath with double slash (//)
